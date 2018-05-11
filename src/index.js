@@ -11,6 +11,7 @@ import registerServiceWorker from './registerServiceWorker';
 // Routes
 import newPost from './components/newPost';
 import PostsIndex from './components/postsIndex';
+import './index.css';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
