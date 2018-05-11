@@ -4,7 +4,7 @@ import axios from 'axios';
 export const CREATE_POST = 'CREATE_POST';
 export const FETCH_POSTS = 'FETCH_POSTS';
 // API Constants
-const API_KEY = 'UNIQUE_API_KEY_123987';
+const API_KEY = 'UNIQUE_API_KEY_1239876';
 const BASE_URL = 'http://reduxblog.herokuapp.com/api';
 
 export const fetchPosts = () => {
@@ -15,8 +15,10 @@ export const fetchPosts = () => {
   };
 };
 
-export const createPost = values => {
-  const request = axios.post(`${BASE_URL}/posts?key=${API_KEY}`, values);
+export const createPost = (values, callback) => {
+  const request = axios
+    .post(`${BASE_URL}/posts?key=${API_KEY}`, values)
+    .then(() => callback());
   return {
     payload: request,
     type: CREATE_POST
