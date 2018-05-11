@@ -2,9 +2,8 @@ import _ from 'lodash';
 
 import { FETCH_POSTS } from '../actions';
 
-export const reducer = (state = {}, action) => {
+const postsReducer = (state = {}, action) => {
   const { type, payload } = action;
-
   switch (type) {
     default:
       return state;
@@ -12,3 +11,5 @@ export const reducer = (state = {}, action) => {
       return _.mapKeys(payload.data, 'id');
   }
 };
+
+export default postsReducer;
