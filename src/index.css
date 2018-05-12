@@ -9,3 +9,11 @@ form a {
 .posts-index {
   margin-top: 30px;
 }
+
+.post-detail {
+  margin-top: 30px;
+}
+
+.post-detail button {
+  margin-bottom: 30px;
+}

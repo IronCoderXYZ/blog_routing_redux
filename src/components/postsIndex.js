@@ -21,7 +21,7 @@ class PostsIndex extends Component {
 
   render() {
     return (
-      <div className="col-sm-8 mx-auto posts-index">
+      <div className="col-sm-6 mx-auto posts-index">
         <div className="text-sm-right">
           <Link className="btn btn-primary" to="/posts/new">
             Add a Post
